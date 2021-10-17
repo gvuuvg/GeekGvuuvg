@@ -3,12 +3,13 @@ import random
 
 
 def rndColor():
-    return random.randint(64, 255), random.randint(64, 255), random.randint(64, 255)
-
+    # return random.randint(210, 220), random.randint(114, 116), random.randint(140, 152)
+    return 128,137,72
 
 def rndColor2():
-    return random.randint(64, 255), random.randint(64, 255), random.randint(64, 255)
-
+    # return random.randint(219, 220), random.randint(115, 116), random.randint(145, 152)
+    # return random.randint(150, 160), random.randint(200, 210), random.randint(190, 200)
+    return 220,113,67
 
 def rndChar():
     return chr(random.randint(65, 90))
@@ -24,5 +25,5 @@ for x in range(width):
         draw.point((x, y), fill=rndColor())
 for t in range(4):
     draw.text((60 * t + 10, 10), rndChar(), font=font, fill=rndColor2())
-#image = image.filter(ImageFilter.BLUR)
-image.save('code.jpg', 'jpeg')
+image = image.filter(ImageFilter.BLUR)
+image.save('code1.jpg', 'jpeg')
